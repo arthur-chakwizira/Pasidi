@@ -112,14 +112,10 @@ __device__ long long is_particle_in_any_cell(double tmp_x, double tmp_y, world* 
 
 	which_voxel = binary_search_iter(table, 0, w->num_voxels - 1, xy); //iterative binary search	
 	
-	//printf("--------\n");
-	//printf("which_voxel is: %lld\n", which_voxel);
-	//printf("xy is: %lld\n", xy);
 	
 	which_cell = cell_idx[which_voxel]-1; //index of cell containing the voxel containing the particle
 	//note the minus 1 to take into account that MATLAB numbering starts at 1. Need to fix this later
 				
-    //printf("which_cell is: %lld\n", which_cell);
     
     r = radii[which_cell];
     cx = centre_x[which_cell];
@@ -135,15 +131,6 @@ __device__ long long is_particle_in_any_cell(double tmp_x, double tmp_y, world* 
 			inside = 1;
 		}
 	}
-	/*/
-	printf("Is inside? : %lld\n", inside);
-	printf("tmp_x : %f\n", tmp_x*1e6);
-	printf("tmp_y : %f\n", tmp_y*1e6);
-	printf("Dist : %f\n", distance*1e12);
-		printf("cx : %f\n", cx*1e6);
-		printf("cy : %f\n", cy*1e6);
-		printf("r : %f\n", r*1e6);
-	/*/
 	
 	return inside;
 }
