@@ -1,9 +1,10 @@
-%test analytical substrate generator
+%analytical substrate generator
 %make substrates using equations
 
 %regular
 close all
 
+%choose type
 regular = 0;
 random_pack = 0;
 gamma_dist = 1;
