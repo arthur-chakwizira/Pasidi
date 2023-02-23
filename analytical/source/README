@@ -1,5 +1,5 @@
 
-pasid_analytical.cu
+pasid_analytical_cylinders.cu
 Runs simulations and saves particle trajectories at a resolution specified by the user.
 
 pasid_analy_cyl_signal.cu
