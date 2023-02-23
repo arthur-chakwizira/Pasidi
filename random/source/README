@@ -1,1 +1,6 @@
 
+pasid_random.cu
+Runs simulations and saves particle trajectories at a resolution specified by the user.
+
+pasid_random_signal.cu
+Runs simulations and generates signals using user-supplied gradient waveforms.
